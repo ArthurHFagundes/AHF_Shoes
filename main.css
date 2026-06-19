@@ -33,8 +33,12 @@ header a {
     font-weight: bold;
 }
 
+header ul {
+    margin-bottom: 0;
+}
+
 header ul > li {
-    float: right; /* O ESPAÇAMENTO ENTRE OS ITENS SOME */
+    float: left; /* O ESPAÇAMENTO ENTRE OS ITENS SOME */
     list-style: none;
     padding: 16px;
 }
@@ -78,6 +82,7 @@ article > h1 {
     grid-template-columns: repeat(4, 25.4%);
     column-gap: 1%;
     row-gap: 5%;
+    padding-left: 0;
 }
 
 .catalogo li {
@@ -116,7 +121,7 @@ li > a {
     text-decoration: none;
 }
 
-button {
+.catalogo button {
     width: 90%;
     margin-left: 8px;
     margin-top: 8px;
@@ -128,10 +133,28 @@ button {
     border-style: none;
 }
 
-button:hover {
+.catalogo button:hover {
     cursor: pointer;
     background-color: #fff;
     color: darkcyan;
+}
+
+.entre-em-contato form {
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+.entre-em-contato input, .entre-em-contato button {
+    width: 30em;
+    margin-bottom: 1em;
+}
+
+.entre-em-contato input {
+    border-color: darkcyan;
+}
+
+.entre-em-contato button {
+    text-transform: uppercase;
 }
 
 @media screen and (min-width:768px) and (max-width: 1023px) { /*! TABLET !*/
@@ -149,10 +172,16 @@ button:hover {
         margin: 16px
     }
 
+    .catalogo {
+        margin-bottom: 20px;
+    }
+
     .catalogo ul {
         grid-template-columns: repeat(2, 49%);
         column-gap: 2%;
         row-gap: 2%;
+        padding-left: 0;
+        font-size: 1em;
     }
 
     .catalogo li {
@@ -167,12 +196,21 @@ button:hover {
         width: 90%;
         margin-top: 20px;
         font-size: 0.8em;
-        padding: 0.8em;
-        height: auto;
+        padding: 0.5em;
     }
 
     ul img {
         margin-left: 0.9em;
+    }
+
+    .entre-em-contato input, .entre-em-contato button {
+        width: 30em;
+        margin-bottom: 1em;
+    }
+
+    .entre-em-contato form {
+        padding: 10px;
+        font-size: 1.2em;
     }
 }
 
@@ -201,6 +239,7 @@ button:hover {
 
     .catalogo ul {
         display: block;
+        padding-left: 0;
     }
 
     .catalogo li {
@@ -223,7 +262,16 @@ button:hover {
         margin-top: 20px;
         margin-left: 13px;
         font-size: 0.8em;
-        padding: 0.8em;
-        height: auto;
+        padding: 0.5em;
+    }
+
+    .entre-em-contato input, .entre-em-contato button {
+        width: 18em;
+        margin-bottom: 1em;
+    }
+
+    .entre-em-contato form {
+        padding: 10px;
+        font-size: 1.2em;
     }
 }
